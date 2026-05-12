@@ -1,0 +1,95 @@
+/* ============================================================
+   Kit（ConvertKit）早鳥名單登記表單樣式 — 配合早鳥登記頁深色 CTA 區
+   ------------------------------------------------------------
+   貼到哪：Kit 後台 → 打開你的表單 → 右側設定面板 → Style →
+           最下面的「Custom CSS」欄位，整段貼進去。
+   （這份 CSS 也已內建在 wishlist/index.html 的 <style> 裡，
+     所以就算不貼進 Kit 後台，嵌入到早鳥登記頁時也會自動套用。
+     貼進 Kit 後台的好處是：Kit 自己 host 的那個版本也會一致。）
+   ============================================================ */
+
+.formkit-form[data-uid] {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: 100% !important;
+  font-family: "Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif !important;
+}
+
+.formkit-form .formkit-header,
+.formkit-form .formkit-subheader { color: #F4EFFF !important; }
+.formkit-form .formkit-subheader p { color: #B7ABD8 !important; }
+
+/* 版面：桌機 email + 名字並排，按鈕整排在下；手機全部各佔一行 */
+.formkit-form .formkit-fields {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px !important; margin: 0 !important;
+}
+.formkit-form .formkit-field { margin: 0 !important; }
+.formkit-form .formkit-submit {
+  grid-column: 1 / -1; width: 100% !important; margin: 4px 0 0 !important; position: static !important;
+}
+@media (max-width: 480px) { .formkit-form .formkit-fields { grid-template-columns: 1fr; } }
+
+/* 輸入框：深色玻璃感 */
+.formkit-form .formkit-input {
+  width: 100% !important;
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(192,132,252,0.28) !important;
+  border-radius: 999px !important;
+  color: #F4EFFF !important;
+  font-size: 16px !important; line-height: 1.4 !important;
+  padding: 15px 22px !important;
+  box-shadow: none !important;
+  transition: border-color .2s ease, background .2s ease, box-shadow .2s ease !important;
+}
+.formkit-form .formkit-input { font-weight: 400 !important; }
+.formkit-form .formkit-input::placeholder { color: #8E83B5 !important; opacity: 1 !important; }
+.formkit-form .formkit-input:focus {
+  outline: none !important;
+  background: rgba(255,255,255,0.10) !important;
+  border-color: rgba(192,132,252,0.7) !important;
+  box-shadow: 0 0 0 3px rgba(168,85,247,0.18) !important;
+}
+
+/* 送出按鈕：霓虹漸層（跟頁面按鈕同款）*/
+.formkit-form .formkit-submit {
+  background: linear-gradient(135deg,#A855F7,#6366F1) !important;
+  background-color: transparent !important;
+  color: #fff !important; border: 0 !important;
+  font-weight: 700 !important; font-size: 16px !important; letter-spacing: 0.04em !important;
+  border-radius: 999px !important; cursor: pointer !important; overflow: hidden !important;
+  box-shadow: 0 0 0 1px rgba(192,132,252,.35), 0 10px 30px rgba(124,58,237,.35) !important;
+  transition: transform .2s ease, box-shadow .25s ease !important;
+}
+.formkit-form .formkit-submit > span { padding: 16px 28px !important; }
+.formkit-form .formkit-submit:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 0 0 1px rgba(192,132,252,.6), 0 14px 40px rgba(124,58,237,.55) !important;
+}
+.formkit-form .formkit-submit:hover > span { background-color: transparent !important; }
+.formkit-form .formkit-submit .formkit-spinner > div { background: #fff !important; }
+
+/* 隱私 / 保證小字 */
+.formkit-form .formkit-guarantee,
+.formkit-form .formkit-guarantee p {
+  color: #7E72A6 !important; font-size: 13px !important; margin-top: 14px !important;
+}
+
+/* 提示訊息 */
+.formkit-form .formkit-alert { border-radius: 10px !important; font-size: 14px !important; margin-bottom: 12px !important; }
+.formkit-form .formkit-alert-error {
+  background: rgba(239,68,68,.12) !important; color: #FCA5A5 !important; border: 1px solid rgba(239,68,68,.3) !important;
+}
+.formkit-form .formkit-alert-success {
+  background: rgba(34,197,94,.12) !important; color: #86EFAC !important; border: 1px solid rgba(34,197,94,.3) !important;
+}
+
+/* 「Built with Kit」徽章：付費方案可以整個隱藏；想保留就刪掉這 3 行 */
+.formkit-form .formkit-powered-by-convertkit,
+.formkit-form .formkit-powered-by-convertkit-container,
+.formkit-form [data-element="powered-by"] { display: none !important; }
+

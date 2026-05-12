@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title> 四週 ChatGPT 日系視覺挑戰營｜早鳥名單登記 </title>
+<meta name="description" content="1 張課程銷售頁主視覺 × 10 張知識圖卡 × 1 套銷售頁分區圖庫 × 1 頁可以公開的課程銷售頁。 2026 年 8 月開課， 7/6 開賣。登記早鳥名單，第一個收到開賣通知並享早鳥優惠價。" />
+
+<!-- Open Graph / Facebook 分享卡片 -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content=" 四週 ChatGPT 日系視覺挑戰營｜早鳥名單登記 " />
+<meta property="og:description" content=" 讓沒有設計背景的你，也能做出專業級的日系視覺。 2026 年 8 月開課， 7/6 開賣，早鳥名單登記開放中 —— 先登記者第一個收到通知 + 享早鳥優惠價。" />
+<meta property="og:image" content="https://vizance.github.io/chatgpt-japanese-visual-bootcamp/assets/hero-banner.png" />
+<meta property="og:url" content="https://vizance.github.io/chatgpt-japanese-visual-bootcamp/" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<style>
+  /* ============================================================
+     四週 ChatGPT 日系視覺挑戰營 — 早鳥名單登記頁
+     方案 B：深色 Hero（ 1.png 全幅）→ 漸層過渡 → 淺色日系內容 → 深色 CTA 收尾
+     ============================================================ */
+
+  :root {
+    /* 淺色日系（內容區） */
+    --paper:   #F8F6F1;
+    --paper-2: #FFFFFF;
+    --ink:     #1F1F1D;
+    --ink-2:   #5C5C57;
+    --line:    #E6E1D6;
+    --blue:    #2F4F7A;
+    --blue-2:  #233D5F;
+    --blue-3:  #8AA4C2;
+
+    /* 深色科技（ Hero / CTA / footer） */
+    --night:    #07020F;
+    --night-2:  #120A26;
+    --night-3:  #1B1033;
+    --glow:     #A855F7;
+    --glow-2:   #C084FC;
+    --neon:     #8B5CF6;
+    --neon-b:   #6366F1;
+    --night-ink:  #F4EFFF;
+    --night-ink2: #B7ABD8;
+    --night-ink3: #7E72A6;
+
+    --maxw:  760px;
+    --maxw-hero: 1080px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Noto Sans TC", "PingFang TC", "Hiragino Sans GB",
+                 "Microsoft JhengHei", system-ui, -apple-system, sans-serif;
+    font-size: 19px;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  img { display: block; max-width: 100%; height: auto; }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+  .wrap-hero { max-width: var(--maxw-hero); margin: 0 auto; padding: 0 24px; }
+
+  /* 淺色內容區的 section */
+  section.light { padding: 76px 0; border-bottom: 1px solid var(--line); }
+  section.light:last-of-type { border-bottom: 0; }
+
+  /* ---------- 共用排版 ---------- */
+  .eyebrow {
+    font-size: 14px;
+    letter-spacing: 0.22em;
+    color: var(--blue);
+    font-weight: 700;
+    margin: 0 0 18px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+  }
+  .eyebrow::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 100%; height: 2px;
+    background: var(--blue-3);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .7s cubic-bezier(.2,.7,.2,1) .15s;
+  }
+  .eyebrow.in-view::after { transform: scaleX(1); }
+
+  h1 { font-size: clamp(30px,5.6vw,44px); line-height:1.4; font-weight:700; margin:0 0 22px; }
+  h2 { font-size: clamp(25px,4vw,32px); line-height:1.5; font-weight:700; margin:0 0 28px; }
+  h3 { font-size: 21px; font-weight:700; margin:0 0 9px; }
+  p  { margin: 0 0 22px; }
+  p:last-child { margin-bottom: 0; }
+  .lead  { font-size: 21px; color: var(--ink); }
+  .muted { color: var(--ink-2); }
+  .small { font-size: 15.5px; color: var(--ink-2); line-height: 1.75; }
+  strong { font-weight: 700; }
+  a { color: var(--blue); }
+
+  /* ---------- 按鈕（在深色底上）---------- */
+  .btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--glow), var(--neon-b));
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    padding: 17px 40px;
+    border-radius: 999px;
+    box-shadow: 0 0 0 1px rgba(192,132,252,.35), 0 10px 30px rgba(124,58,237,.35);
+    transition: transform .2s ease, box-shadow .25s ease;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 0 1px rgba(192,132,252,.6), 0 14px 40px rgba(124,58,237,.55);
+  }
+  .btn-note { font-size: 15.5px; color: var(--night-ink3); margin: 16px 0 0; }
+
+  /* ============================================================
+     HERO（深色 + 1.png 全幅）
+     ============================================================ */
+  .hero {
+    background: var(--night);
+    position: relative;
+    overflow: hidden;
+    padding: 0 0 64px;
+    text-align: center;
+  }
+  /* 兩團會緩慢飄移的霓虹光暈 */
+  .hero::before, .hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero::before {
+    width: 620px; height: 620px;
+    top: -160px; left: -120px;
+    background: radial-gradient(circle, rgba(139,92,246,.32), transparent 65%);
+    animation: float-a 14s ease-in-out infinite alternate;
+  }
+  .hero::after {
+    width: 560px; height: 560px;
+    bottom: -180px; right: -120px;
+    background: radial-gradient(circle, rgba(99,102,241,.28), transparent 65%);
+    animation: float-b 17s ease-in-out infinite alternate;
+  }
+  @keyframes float-a { from { transform: translate(0,0); } to { transform: translate(60px,40px); } }
+  @keyframes float-b { from { transform: translate(0,0); } to { transform: translate(-50px,-30px); } }
+
+  .hero .wrap-hero { position: relative; z-index: 1; }
+
+  .hero-eyebrow {
+    display: inline-block;
+    margin: 56px 0 28px;
+    padding: 7px 18px;
+    border: 1px solid rgba(192,132,252,.4);
+    border-radius: 999px;
+    font-size: 13.5px;
+    letter-spacing: 0.18em;
+    color: var(--glow-2);
+    background: rgba(168,85,247,.10);
+    backdrop-filter: blur(8px);
+  }
+
+  .hero-image {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow:
+      0 0 0 1px rgba(192,132,252,.20),
+      0 30px 80px rgba(0,0,0,.55),
+      0 0 90px rgba(139,92,246,.25);
+  }
+
+  .hero-cta { margin-top: 40px; }
+
+  /* 深色 → 米白 的漸層過渡帶 */
+  .fade-to-paper {
+    height: 120px;
+    background: linear-gradient(to bottom, var(--night) 0%, #2A2238 35%, #8C8190 70%, var(--paper) 100%);
+  }
+  /* 米白 → 深色 的漸層過渡帶 */
+  .fade-to-night {
+    height: 120px;
+    background: linear-gradient(to bottom, var(--paper) 0%, #9A8FA0 30%, #2A2238 65%, var(--night) 100%);
+  }
+
+  /* ============================================================
+     淺色日系內容區
+     ============================================================ */
+
+  /* 四週成品 */
+  .week {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 22px;
+    padding: 26px 0;
+    border-top: 1px solid var(--line);
+  }
+  .week:first-of-type { border-top: 0; padding-top: 0; }
+  .week:last-of-type { padding-bottom: 0; }
+  .week .no { font-size: 33px; font-weight: 300; color: var(--blue-3); line-height: 1.2; }
+  .week .deliver {
+    display: inline-block; margin-top: 12px; font-size: 15.5px; color: var(--blue);
+    border: 1px solid var(--blue-3); border-radius: 3px; padding: 3px 10px; line-height: 1.6;
+  }
+  .week p { margin-bottom: 0; color: var(--ink-2); }
+
+  /* 適合誰 */
+  ul.who { list-style: none; margin: 0 0 22px; padding: 0; }
+  ul.who li { padding: 14px 0 14px 26px; border-top: 1px solid var(--line); position: relative; }
+  ul.who li:first-child { border-top: 0; }
+  ul.who li::before { content: "—"; position: absolute; left: 0; color: var(--blue-3); }
+
+  /* 贈品 */
+  .bonus { background: var(--paper-2); border: 1px solid var(--line); border-radius: 4px; padding: 26px 28px; margin-top: 8px; }
+  .bonus .label { font-size: 13px; letter-spacing: 0.18em; color: var(--blue); font-weight: 700; margin: 0 0 14px; }
+  .bonus ul { margin: 0; padding-left: 1.2em; }
+  .bonus li { margin-bottom: 6px; color: var(--ink-2); }
+  .bonus li:last-child { margin-bottom: 0; }
+
+  /* 講師區（照片 + 簡介） */
+  .instructor {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 38px;
+    align-items: start;
+  }
+  .instructor-photo { margin: 0; }
+  .instructor-photo img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    box-shadow: 0 14px 36px rgba(0,0,0,.10);
+  }
+  .instructor-bio p:last-child { margin-bottom: 0; }
+  @media (max-width: 600px) {
+    .instructor { grid-template-columns: 1fr; gap: 22px; }
+    .instructor-photo { max-width: 200px; }
+  }
+
+  /* ============================================================
+     深色 CTA 收尾區（為什麼現在加 + 表單）
+     ============================================================ */
+  section.night {
+    background: var(--night);
+    color: var(--night-ink);
+    position: relative;
+    overflow: hidden;
+    padding: 76px 0;
+  }
+  section.night::before {
+    content: "";
+    position: absolute;
+    width: 700px; height: 700px;
+    border-radius: 50%;
+    filter: blur(70px);
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    background: radial-gradient(circle, rgba(139,92,246,.18), transparent 60%);
+    pointer-events: none;
+  }
+  section.night .wrap { position: relative; z-index: 1; }
+  section.night .eyebrow { color: var(--glow-2); }
+  section.night .eyebrow::after { background: rgba(192,132,252,.5); }
+  section.night h2 { color: var(--night-ink); }
+  section.night .muted { color: var(--night-ink2); }
+  section.night .small { color: var(--night-ink3); }
+  section.night strong { color: var(--night-ink); }
+
+  /* 時間軸 */
+  ol.timeline { list-style: none; margin: 28px 0 0; padding: 0; }
+  ol.timeline li {
+    display: grid; grid-template-columns: 92px 1fr; gap: 20px;
+    padding: 18px 0; border-top: 1px solid rgba(183,171,216,.18);
+  }
+  ol.timeline li:first-child { border-top: 0; }
+  ol.timeline .when { font-weight: 700; color: var(--glow-2); }
+  ol.timeline .what { color: var(--night-ink2); }
+  ol.timeline li.now .what { color: var(--night-ink); }
+  ol.timeline li.now .what::after {
+    content: " 你在這裡 "; display: inline-block; margin-left: 10px; font-size: 12px;
+    background: linear-gradient(135deg, var(--glow), var(--neon-b)); color: #fff;
+    border-radius: 999px; padding: 2px 10px; letter-spacing: 0.04em; vertical-align: middle;
+  }
+
+  /* 表單卡片（深色玻璃感，融入深色 CTA 區） */
+  .form-card {
+    margin-top: 28px;
+    padding: 32px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(192,132,252,0.18);
+    box-shadow: 0 24px 70px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.04);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  .form-card .small { color: var(--night-ink3); }
+  .kit-placeholder {
+    color: var(--night-ink3); font-size: 14px; text-align: center; padding: 18px 0;
+    border: 1px dashed rgba(192,132,252,0.25); border-radius: 10px;
+  }
+
+  /* ============================================================
+     Kit（ ConvertKit）表單樣式 — 配合深色 CTA 區
+     用 #waitlist 提高優先序，蓋過 Kit embed 自帶的 <style> 與 inline style。
+     （另存一份 assets/kit-form.css；若想連 Kit 自家 host 的表單頁也一致，
+       把那份「不含 #waitlist」的版本貼進 Kit 後台的 Custom CSS。）
+     ============================================================ */
+  #waitlist .formkit-form {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    font-family: "Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif !important;
+  }
+  #waitlist .formkit-form .formkit-header,
+  #waitlist .formkit-form .formkit-subheader { color: var(--night-ink) !important; }
+  #waitlist .formkit-form .formkit-subheader p { color: var(--night-ink2) !important; }
+
+  /* 版面：桌機 email + 名字並排，按鈕整排在下；手機全部各佔一行 */
+  #waitlist .formkit-form .formkit-fields {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px !important;
+    margin: 0 !important;
+  }
+  #waitlist .formkit-form .formkit-field { margin: 0 !important; }
+  #waitlist .formkit-form .formkit-submit {
+    grid-column: 1 / -1;
+    width: 100% !important;
+    margin: 4px 0 0 !important;
+    position: static !important;
+  }
+  @media (max-width: 480px) {
+    #waitlist .formkit-form .formkit-fields { grid-template-columns: 1fr; }
+  }
+
+  /* 輸入框：深色玻璃感 */
+  #waitlist .formkit-form .formkit-input {
+    width: 100% !important;
+    background: rgba(255,255,255,0.06) !important;
+    border: 1px solid rgba(192,132,252,0.28) !important;
+    border-radius: 999px !important;
+    color: var(--night-ink) !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    padding: 15px 22px !important;
+    box-shadow: none !important;
+    transition: border-color .2s ease, background .2s ease, box-shadow .2s ease !important;
+  }
+  #waitlist .formkit-form .formkit-input::placeholder { color: #8E83B5 !important; opacity: 1 !important; }
+  #waitlist .formkit-form .formkit-input:focus {
+    outline: none !important;
+    background: rgba(255,255,255,0.10) !important;
+    border-color: rgba(192,132,252,0.7) !important;
+    box-shadow: 0 0 0 3px rgba(168,85,247,0.18) !important;
+  }
+
+  /* 送出按鈕：跟頁面的 .btn 同款霓虹漸層 */
+  #waitlist .formkit-form .formkit-submit {
+    background: linear-gradient(135deg,#A855F7,#6366F1) !important;
+    background-color: transparent !important;
+    color: #fff !important;
+    border: 0 !important;
+    border-radius: 999px !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    letter-spacing: 0.04em !important;
+    cursor: pointer !important;
+    overflow: hidden !important;
+    box-shadow: 0 0 0 1px rgba(192,132,252,.35), 0 10px 30px rgba(124,58,237,.35) !important;
+    transition: transform .2s ease, box-shadow .25s ease !important;
+  }
+  #waitlist .formkit-form .formkit-submit > span { padding: 16px 28px !important; }
+  #waitlist .formkit-form .formkit-submit:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 0 0 1px rgba(192,132,252,.6), 0 14px 40px rgba(124,58,237,.55) !important;
+  }
+  #waitlist .formkit-form .formkit-submit:hover > span { background-color: transparent !important; }
+  #waitlist .formkit-form .formkit-submit .formkit-spinner > div { background: #fff !important; }
+
+  /* 隱私 / 保證小字 */
+  #waitlist .formkit-form .formkit-guarantee,
+  #waitlist .formkit-form .formkit-guarantee p {
+    color: var(--night-ink3) !important; font-size: 13px !important; margin-top: 14px !important;
+  }
+
+  /* 提示訊息 */
+  #waitlist .formkit-form .formkit-alert { border-radius: 10px !important; font-size: 14px !important; margin: 0 0 12px !important; }
+  #waitlist .formkit-form .formkit-alert-error {
+    background: rgba(239,68,68,.12) !important; color: #FCA5A5 !important; border: 1px solid rgba(239,68,68,.3) !important;
+  }
+  #waitlist .formkit-form .formkit-alert-success {
+    background: rgba(34,197,94,.12) !important; color: #86EFAC !important; border: 1px solid rgba(34,197,94,.3) !important;
+  }
+
+  /* 「 Built with Kit」徽章：你的表單已設定不顯示；保險起見也藏起來 */
+  #waitlist .formkit-form .formkit-powered-by-convertkit,
+  #waitlist .formkit-form .formkit-powered-by-convertkit-container,
+  #waitlist .formkit-form [data-element="powered-by"] { display: none !important; }
+
+  /* ============================================================
+     Footer（深色）
+     ============================================================ */
+  footer {
+    background: var(--night);
+    color: var(--night-ink3);
+    padding: 40px 0 52px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.9;
+  }
+  footer a { color: var(--night-ink2); }
+
+  /* ============================================================
+     進場動畫（中等程度）
+     ============================================================ */
+  [data-animate] {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1);
+  }
+  [data-animate].in-view { opacity: 1; transform: none; }
+  /* W1–W4 逐個淡入 */
+  .week[data-animate]:nth-of-type(1) { transition-delay: .05s; }
+  .week[data-animate]:nth-of-type(2) { transition-delay: .15s; }
+  .week[data-animate]:nth-of-type(3) { transition-delay: .25s; }
+  .week[data-animate]:nth-of-type(4) { transition-delay: .35s; }
+  ul.who li[data-animate]:nth-child(1) { transition-delay: .05s; }
+  ul.who li[data-animate]:nth-child(2) { transition-delay: .15s; }
+  ul.who li[data-animate]:nth-child(3) { transition-delay: .25s; }
+
+  /* 尊重「減少動態」偏好：全部關掉 */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    [data-animate] { opacity: 1 !important; transform: none !important; }
+    .eyebrow::after { transform: scaleX(1) !important; }
+  }
+
+  /* ---------- 手機 ---------- */
+  @media (max-width: 560px) {
+    body { font-size: 17.5px; }
+    section.light, section.night { padding: 56px 0; }
+    .hero { padding-bottom: 48px; }
+    .hero-eyebrow { margin: 36px 0 22px; }
+    .hero-cta { margin-top: 30px; }
+    .fade-to-paper, .fade-to-night { height: 80px; }
+    .week { grid-template-columns: 1fr; gap: 8px; }
+    .week .no { font-size: 26px; }
+    ol.timeline li { grid-template-columns: 1fr; gap: 4px; }
+    ol.timeline li.now .what::after { display: block; margin: 6px 0 0; }
+    .form-card { padding: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO（深色 + 1.png 全幅）============ -->
+<header class="hero">
+  <div class="wrap-hero">
+    <p class="hero-eyebrow">2026 年 8 月開課 · 早鳥名單登記開放中 </p>
+    <div class="hero-image" data-animate>
+      <img src="assets/hero-banner.png" width="1672" height="941"
+           alt=" 四週 ChatGPT 日系視覺挑戰營： 1 張課程銷售頁主視覺 × 10 張知識圖卡 × 1 套銷售頁分區圖庫 × 1 頁可以公開的課程銷售頁 " />
+    </div>
+    <div class="hero-cta">
+      <a class="btn" href="#waitlist"> 登記早鳥名單 →</a>
+      <p class="btn-note">1 張主視覺 × 10 張知識圖卡 × 1 套分區圖庫 × 1 頁銷售頁　·　7/6 正式開賣，先登記的人第一個收到通知 + 享早鳥優惠價 </p>
+    </div>
+  </div>
+</header>
+
+<!-- 深色 → 米白 過渡帶 -->
+<div class="fade-to-paper" aria-hidden="true"></div>
+
+<!-- ============ 這場挑戰營在說什麼 ============ -->
+<section class="light">
+  <div class="wrap">
+    <p class="eyebrow" data-animate> 這場挑戰營在說什麼 </p>
+    <p class="lead" data-animate>
+      這是一場專為「想開課、想做知識內容，但卡在視覺製作的講師 / 副業經營者 / 知識型工作者」設計的四週線上挑戰營。
+    </p>
+    <p class="muted" data-animate>
+      由經營知識內容多年的朱騏教學，結合 ChatGPT 與日系設計的模組指令規格，透過四週循序漸進的工作流，讓你做出可以直接上架的日系課程封面、整套知識圖卡、銷售頁分區圖庫，以及一頁可以公開的課程銷售頁（ Landing Page）。
+    </p>
+    <p class="muted" data-animate>
+      每週一場 60 分鐘直播，搭配 Discord 共學社群（連續四週），讓你回家真的把作品做出來，並公開在社群和課程頁面上。
+    </p>
+  </div>
+</section>
+
+<!-- ============ 四週你會帶走什麼 ============ -->
+<section class="light">
+  <div class="wrap">
+    <p class="eyebrow" data-animate> 四週後，你的電腦裡會多出這些 </p>
+    <h2 data-animate> 一條從文字 → 主視覺 → 圖卡 → 分區圖庫 → 銷售頁的完整工作流 </h2>
+
+    <div class="week" data-animate>
+      <div class="no">W1</div>
+      <div>
+        <h3> 課程銷售頁主視覺工作流 </h3>
+        <p> 從你「已經準備好的文字」出發，用 5 模組設計規格（文字內容 / 色彩計畫 / 字體特徵 / 佈局構圖 / 規格大小）拆解日系邏輯，再用一組封面 Prompt 模板生圖。沒有自己的文案也沒關係，朱騏會提供範例讓你練習。</p>
+        <span class="deliver"> 成品： 1 張可上架的日系課程封面 </span>
+      </div>
+    </div>
+
+    <div class="week" data-animate>
+      <div class="no">W2</div>
+      <div>
+        <h3> 課程知識圖卡組工作流 </h3>
+        <p> 用 8 段敘事弧線（ Hook / Gap / Vision / System / Transformation / Authority / Action / Final Call）規劃整套圖卡，再用 ChatGPT 批次生圖工作流一次產出，並學會修復文字重複、風格不一致等常見問題。</p>
+        <span class="deliver"> 成品： 1 整套 10 張風格一致的日系知識圖卡 </span>
+      </div>
+    </div>
+
+    <div class="week" data-animate>
+      <div class="no">W3</div>
+      <div>
+        <h3> 銷售頁分區圖庫工作流 </h3>
+        <p> 知識圖卡是「連續閱讀」，課程銷售頁是「分區塊閱讀」。把銷售頁拆成 Hero / 痛點 / 適合類型 / 收穫 / 贈品 / CTA 等標準區塊，用對應的 Prompt 模板，一次產出整套有區塊邏輯、風格統一的圖。</p>
+        <span class="deliver"> 成品： 1 整套銷售頁分區圖庫 </span>
+      </div>
+    </div>
+
+    <div class="week" data-animate>
+      <div class="no">W4</div>
+      <div>
+        <h3> 課程銷售頁（ HTML）工作流 </h3>
+        <p> 用「排版策略師」級別的 Prompt，把前三週的素材組成一份可貼進任何 CMS 的課程銷售頁 HTML。內建 6 種排版型態（ Z-Pattern / F-Pattern / Split-Screen / Asymmetric / Card Grid / Zig-Zag）與風格校準工作流，讓頁面色調跟你前三週的圖自動對齊。沒有 CMS 也行，會用 Netlify Drop 補充示範。</p>
+        <span class="deliver"> 成品： 1 頁可以公開的課程銷售頁 </span>
+      </div>
+    </div>
+
+    <div class="bonus" data-animate>
+      <p class="label"> 報名還會直接拿到 4 大贈品 </p>
+      <ul>
+        <li> 四週完整 Prompt 包（封面 / 圖卡 / 銷售頁圖片 / HTML 生成，含「課程銷售頁排版策略師 Prompt」）</li>
+        <li> 朱騏的 2 份真實課程銷售頁文案（含這場挑戰營本身的文案）</li>
+        <li> 課程專屬 Discord 共學社群（課後持續開放）</li>
+        <li>Design 100 Reference — 收錄 100 種設計風格的線上靈感庫 </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 適合誰 ============ -->
+<section class="light">
+  <div class="wrap">
+    <p class="eyebrow" data-animate> 這場挑戰營適合誰 </p>
+    <ul class="who">
+      <li data-animate> 想開線上課程、課程內容都準備好了，卻卡在「課程封面怎麼做」的講師 </li>
+      <li data-animate> 經營知識副業，每週都要產出視覺內容，但做出來的圖總是抓不到「日系專業」那種感覺、也看不出系列感的人 </li>
+      <li data-animate> 用過 ChatGPT 生圖，知道它能生出漂亮的圖，但想把它變成「穩定產出整套視覺」工具的人 </li>
+    </ul>
+    <p class="small" data-animate>
+      不是這三種類型也沒關係 —— 只要你手上有「文字」想轉成「視覺」（部落格文章、社群貼文、產品介紹、報告封面都可以），這套工作流就用得上。
+    </p>
+  </div>
+</section>
+
+<!-- ============ 講師 ============ -->
+<section class="light">
+  <div class="wrap">
+    <p class="eyebrow" data-animate> 關於講師 · 朱騏 </p>
+    <div class="instructor">
+      <figure class="instructor-photo" data-animate>
+        <img src="assets/instructor-chi.jpg" width="900" height="1350"
+             alt=" 朱騏 — 知騏然有限公司創辦人，《知識複利筆記術》與《復盤寫作術》作者 " loading="lazy" />
+      </figure>
+      <div class="instructor-bio">
+        <p class="muted" data-animate>
+          我從 2019 年開始經營知識內容，累積超過 500 篇部落格文章、上萬名讀者，出版過《知識複利筆記術》和《復盤寫作術》兩本書。
+        </p>
+        <p class="muted" data-animate>
+          我跟你一樣不是設計背景出身。會寫文章、會做課程、會講內容，但每次要做一張課程封面、一組社群圖卡就卡住 —— Canva 模板長得都很像、 Figma 學習曲線太陡、外包一張動輒幾千塊還不一定符合預期。
+        </p>
+        <p class="muted" data-animate>
+          直到 ChatGPT Images 2.0 出來，我花了好幾個月把一張一張失敗的圖累積起來，才慢慢摸索出「日系設計 5 模組規格」與「敘事弧線 8 段結構」這兩套方法，現在它們是我自己課程封面、知識圖卡、社群貼文的穩定工作流。
+        </p>
+        <p data-animate> 這場挑戰營，就是把我走過的這幾個月彎路打包給你。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 米白 → 深色 過渡帶 -->
+<div class="fade-to-night" aria-hidden="true"></div>
+
+<!-- ============ 為什麼現在先登記早鳥名單（深色）============ -->
+<section class="night">
+  <div class="wrap">
+    <p class="eyebrow" data-animate> 為什麼現在先登記早鳥名單 </p>
+    <p class="muted" data-animate>
+      這場挑戰營的本質是「直播 + 你親自動手做」，所以開課頻率不會很高，名額也有限。<strong>7/6 正式開賣。</strong> 先登記早鳥名單的人，會比所有人早一步收到開賣通知，並且拿到限時的早鳥優惠價。
+    </p>
+    <ol class="timeline" data-animate>
+      <li class="now"><span class="when">6 月下旬 </span><span class="what"> 早鳥名單登記開放 </span></li>
+      <li><span class="when">7 / 6</span><span class="what"> 正式開賣 —— 已登記者優先收到通知、享早鳥優惠價 </span></li>
+      <li><span class="when">8 / 17 起 </span><span class="what"> 連續四週、每週一晚 20:00–21:00 直播（ 8/17 、 8/24 、 8/31 、 9/7 ），不能參加都有錄影回放 </span></li>
+    </ol>
+    <p class="small" data-animate style="margin-top:24px;"> 免費登記，只會在開賣前後寄信通知你，隨時可以退訂。</p>
+  </div>
+</section>
+
+<!-- ============ 早鳥名單登記表單（深色）============ -->
+<section class="night" id="waitlist">
+  <div class="wrap">
+    <p class="eyebrow" data-animate> 登記早鳥名單 </p>
+    <h2 data-animate> 留下 Email， 7/6 開賣第一個通知你 + 早鳥優惠價 </h2>
+    <p class="muted" data-animate> 如果你已經讀到這裡，代表你心裡其實知道自己需要這套方法。先佔個位置，開賣時別讓自己錯過。</p>
+
+    <div class="form-card" data-animate>
+      <!-- ============================================================
+           Kit（ ConvertKit）表單嵌入區 — form 9432006 / uid 240ee4992a
+           表單的深色樣式由本頁 <style> 裡的 #waitlist .formkit-form 規則負責。
+           若日後重新從 Kit 複製 embed code，整段換掉這裡即可（樣式會自動套用）。
+           ============================================================ -->
+      <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+      <form action="https://app.kit.com/forms/9432006/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9432006" data-uid="240ee4992a" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot; 已經幫你佔好位置了 🪑 ！ 7/6 開賣你會第一個收到通知 + 早鳥優惠價，記得留意信箱（含垃圾郵件）。&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:false,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800"><div data-style="clean"><ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul><div data-element="fields" data-stacked="false" class="seva-fields formkit-fields"><div class="formkit-field"><input class="formkit-input" name="email_address" aria-label=" 您的 Email 是？" placeholder=" 您的 Email 是？" required="" type="email"></div><div class="formkit-field"><input class="formkit-input" aria-label=" 怎麼稱呼你？" name="fields[first_name]" placeholder=" 怎麼稱呼你？" type="text"></div><button data-element="submit" class="formkit-submit formkit-submit"><div class="formkit-spinner"><div></div><div></div><div></div></div><span class=""> 先幫我卡位 →</span></button></div></div><style>.formkit-form[data-uid="240ee4992a"] *{box-sizing:border-box;}.formkit-form[data-uid="240ee4992a"]{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}.formkit-form[data-uid="240ee4992a"] legend{border:none;font-size:inherit;margin-bottom:10px;padding:0;position:relative;display:table;}.formkit-form[data-uid="240ee4992a"] fieldset{border:0;padding:0.01em 0 0 0;margin:0;min-width:0;}.formkit-form[data-uid="240ee4992a"] body:not(:-moz-handler-blocked) fieldset{display:table-cell;}.formkit-form[data-uid="240ee4992a"] h1,.formkit-form[data-uid="240ee4992a"] h2,.formkit-form[data-uid="240ee4992a"] h3,.formkit-form[data-uid="240ee4992a"] h4,.formkit-form[data-uid="240ee4992a"] h5,.formkit-form[data-uid="240ee4992a"] h6{color:inherit;font-size:inherit;font-weight:inherit;}.formkit-form[data-uid="240ee4992a"] h2{font-size:1.5em;margin:1em 0;}.formkit-form[data-uid="240ee4992a"] h3{font-size:1.17em;margin:1em 0;}.formkit-form[data-uid="240ee4992a"] p{color:inherit;font-size:inherit;font-weight:inherit;}.formkit-form[data-uid="240ee4992a"] ol:not([template-default]),.formkit-form[data-uid="240ee4992a"] ul:not([template-default]),.formkit-form[data-uid="240ee4992a"] blockquote:not([template-default]){text-align:left;}.formkit-form[data-uid="240ee4992a"] p:not([template-default]),.formkit-form[data-uid="240ee4992a"] hr:not([template-default]),.formkit-form[data-uid="240ee4992a"] blockquote:not([template-default]),.formkit-form[data-uid="240ee4992a"] ol:not([template-default]),.formkit-form[data-uid="240ee4992a"] ul:not([template-default]){color:inherit;font-style:initial;}.formkit-form[data-uid="240ee4992a"] .ordered-list,.formkit-form[data-uid="240ee4992a"] .unordered-list{list-style-position:outside !important;padding-left:1em;}.formkit-form[data-uid="240ee4992a"] .list-item{padding-left:0;}.formkit-form[data-uid="240ee4992a"][data-format="modal"]{display:none;}.formkit-form[data-uid="240ee4992a"][data-format="slide in"]{display:none;}.formkit-form[data-uid="240ee4992a"][data-format="sticky bar"]{display:none;}.formkit-sticky-bar .formkit-form[data-uid="240ee4992a"][data-format="sticky bar"]{display:block;}.formkit-form[data-uid="240ee4992a"] .formkit-input,.formkit-form[data-uid="240ee4992a"] .formkit-select,.formkit-form[data-uid="240ee4992a"] .formkit-checkboxes{width:100%;}.formkit-form[data-uid="240ee4992a"] .formkit-button,.formkit-form[data-uid="240ee4992a"] .formkit-submit{border:0;border-radius:5px;color:#ffffff;cursor:pointer;display:inline-block;text-align:center;font-size:15px;font-weight:500;cursor:pointer;margin-bottom:15px;overflow:hidden;padding:0;position:relative;vertical-align:middle;}.formkit-form[data-uid="240ee4992a"] .formkit-button:hover,.formkit-form[data-uid="240ee4992a"] .formkit-submit:hover,.formkit-form[data-uid="240ee4992a"] .formkit-button:focus,.formkit-form[data-uid="240ee4992a"] .formkit-submit:focus{outline:none;}.formkit-form[data-uid="240ee4992a"] .formkit-button:hover > span,.formkit-form[data-uid="240ee4992a"] .formkit-submit:hover > span,.formkit-form[data-uid="240ee4992a"] .formkit-button:focus > span,.formkit-form[data-uid="240ee4992a"] .formkit-submit:focus > span{background-color:rgba(0,0,0,0.1);}.formkit-form[data-uid="240ee4992a"] .formkit-button > span,.formkit-form[data-uid="240ee4992a"] .formkit-submit > span{display:block;-webkit-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out;padding:12px 24px;}.formkit-form[data-uid="240ee4992a"] .formkit-input{background:#ffffff;font-size:15px;padding:12px;border:1px solid #e3e3e3;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;line-height:1.4;margin:0;-webkit-transition:border-color ease-out 300ms;transition:border-color ease-out 300ms;}.formkit-form[data-uid="240ee4992a"] .formkit-input:focus{outline:none;border-color:#1677be;-webkit-transition:border-color ease 300ms;transition:border-color ease 300ms;}.formkit-form[data-uid="240ee4992a"] .formkit-input::-webkit-input-placeholder{color:inherit;opacity:0.8;}.formkit-form[data-uid="240ee4992a"] .formkit-input::-moz-placeholder{color:inherit;opacity:0.8;}.formkit-form[data-uid="240ee4992a"] .formkit-input:-ms-input-placeholder{color:inherit;opacity:0.8;}.formkit-form[data-uid="240ee4992a"] .formkit-input::placeholder{color:inherit;opacity:0.8;}.formkit-form[data-uid="240ee4992a"] [data-group="dropdown"]{position:relative;display:inline-block;width:100%;}.formkit-form[data-uid="240ee4992a"] [data-group="dropdown"]::before{content:"";top:calc(50% - 2.5px);right:10px;position:absolute;pointer-events:none;border-color:#4f4f4f transparent transparent transparent;border-style:solid;border-width:6px 6px 0 6px;height:0;width:0;z-index:999;}.formkit-form[data-uid="240ee4992a"] [data-group="dropdown"] select{height:auto;width:100%;cursor:pointer;color:#333333;line-height:1.4;margin-bottom:0;padding:0 6px;-webkit-appearance:none;-moz-appearance:none;appearance:none;font-size:15px;padding:12px;padding-right:25px;border:1px solid #e3e3e3;background:#ffffff;}.formkit-form[data-uid="240ee4992a"] [data-group="dropdown"] select:focus{outline:none;}.formkit-form[data-uid="240ee4992a"] [data-group="checkboxes"]{text-align:left;margin:0;}.formkit-form[data-uid="240ee4992a"] [data-group="checkboxes"] [data-group="checkbox"]{margin-bottom:10px;}.formkit-form[data-uid="240ee4992a"] [data-group="checkboxes"] [data-group="checkbox"] *{cursor:pointer;}.formkit-form[data-uid="240ee4992a"] [data-group="checkboxes"] [data-group="checkbox"]:last-of-type{margin-bottom:0;}.formkit-form[data-uid="240ee4992a"] [data-group="checkboxes"] [data-group="checkbox"] input[type="checkbox"]{display:none;}.formkit-form[data-uid="240ee4992a"] [data-group="checkboxes"] [data-group="checkbox"] input[type="checkbox"] + label::after{content:none;}.formkit-form[data-uid="240ee4992a"] [data-group="checkboxes"] [data-group="checkbox"] input[type="checkbox"]:checked + label::after{border-color:#ffffff;content:"";}.formkit-form[data-uid="240ee4992a"] [data-group="checkboxes"] [data-group="checkbox"] input[type="checkbox"]:checked + label::before{background:#10bf7a;border-color:#10bf7a;}.formkit-form[data-uid="240ee4992a"] [data-group="checkboxes"] [data-group="checkbox"] label{position:relative;display:inline-block;padding-left:28px;}.formkit-form[data-uid="240ee4992a"] [data-group="checkboxes"] [data-group="checkbox"] label::before,.formkit-form[data-uid="240ee4992a"] [data-group="checkboxes"] [data-group="checkbox"] label::after{position:absolute;content:"";display:inline-block;}.formkit-form[data-uid="240ee4992a"] [data-group="checkboxes"] [data-group="checkbox"] label::before{height:16px;width:16px;border:1px solid #e3e3e3;background:#ffffff;left:0px;top:3px;}.formkit-form[data-uid="240ee4992a"] [data-group="checkboxes"] [data-group="checkbox"] label::after{height:4px;width:8px;border-left:2px solid #4d4d4d;border-bottom:2px solid #4d4d4d;-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);left:4px;top:8px;}.formkit-form[data-uid="240ee4992a"] .formkit-alert{background:#f9fafb;border:1px solid #e3e3e3;border-radius:5px;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;list-style:none;margin:25px auto;padding:12px;text-align:center;width:100%;}.formkit-form[data-uid="240ee4992a"] .formkit-alert:empty{display:none;}.formkit-form[data-uid="240ee4992a"] .formkit-alert-success{background:#d3fbeb;border-color:#10bf7a;color:#0c905c;}.formkit-form[data-uid="240ee4992a"] .formkit-alert-error{background:#fde8e2;border-color:#f2643b;color:#ea4110;}.formkit-form[data-uid="240ee4992a"] .formkit-spinner{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:0px;width:0px;margin:0 auto;position:absolute;top:0;left:0;right:0;width:0px;overflow:hidden;text-align:center;-webkit-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out;}.formkit-form[data-uid="240ee4992a"] .formkit-spinner > div{margin:auto;width:12px;height:12px;background-color:#fff;opacity:0.3;border-radius:100%;display:inline-block;-webkit-animation:formkit-bouncedelay-formkit-form-data-uid-240ee4992a- 1.4s infinite ease-in-out both;animation:formkit-bouncedelay-formkit-form-data-uid-240ee4992a- 1.4s infinite ease-in-out both;}.formkit-form[data-uid="240ee4992a"] .formkit-spinner > div:nth-child(1){-webkit-animation-delay:-0.32s;animation-delay:-0.32s;}.formkit-form[data-uid="240ee4992a"] .formkit-spinner > div:nth-child(2){-webkit-animation-delay:-0.16s;animation-delay:-0.16s;}.formkit-form[data-uid="240ee4992a"] .formkit-submit[data-active] .formkit-spinner{opacity:1;height:100%;width:50px;}.formkit-form[data-uid="240ee4992a"] .formkit-submit[data-active] .formkit-spinner ~ span{opacity:0;}.formkit-form[data-uid="240ee4992a"] .formkit-powered-by[data-active="false"]{opacity:0.35;}.formkit-form[data-uid="240ee4992a"] .formkit-powered-by-convertkit-container{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;margin:10px 0;position:relative;}.formkit-form[data-uid="240ee4992a"] .formkit-powered-by-convertkit-container[data-active="false"]{opacity:0.35;}.formkit-form[data-uid="240ee4992a"] .formkit-powered-by-convertkit{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#ffffff;border-radius:9px;color:#3d3d3d;cursor:pointer;display:block;height:36px;margin:0 auto;opacity:0.95;padding:0;-webkit-text-decoration:none;text-decoration:none;text-indent:100%;-webkit-transition:ease-in-out all 200ms;transition:ease-in-out all 200ms;white-space:nowrap;overflow:hidden;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:157px;background-repeat:no-repeat;background-position:center;}.formkit-form[data-uid="240ee4992a"] .formkit-powered-by-convertkit:hover,.formkit-form[data-uid="240ee4992a"] .formkit-powered-by-convertkit:focus{background-color:#ffffff;-webkit-transform:scale(1.025) perspective(1px);-ms-transform:scale(1.025) perspective(1px);transform:scale(1.025) perspective(1px);opacity:1;}@-webkit-keyframes formkit-bouncedelay-formkit-form-data-uid-240ee4992a-{0%,80%,100%{-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);}40%{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}}@keyframes formkit-bouncedelay-formkit-form-data-uid-240ee4992a-{0%,80%,100%{-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);}40%{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}}.formkit-form[data-uid="240ee4992a"] blockquote{padding:10px 20px;margin:0 0 20px;border-left:5px solid #e1e1e1;}.formkit-form[data-uid="240ee4992a"] .seva-custom-content{padding:15px;font-size:16px;color:#fff;mix-blend-mode:difference;}.formkit-form[data-uid="240ee4992a"] .formkit-modal.guard{max-width:420px;width:100%;}.formkit-form[data-uid="240ee4992a"]{max-width:700px;}.formkit-form[data-uid="240ee4992a"] [data-style="clean"]{width:100%;}.formkit-form[data-uid="240ee4992a"] .formkit-fields{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 auto;}.formkit-form[data-uid="240ee4992a"] .formkit-field,.formkit-form[data-uid="240ee4992a"] .formkit-submit{margin:0 0 15px 0;-webkit-flex:1 0 100%;-ms-flex:1 0 100%;flex:1 0 100%;}.formkit-form[data-uid="240ee4992a"] .formkit-powered-by-convertkit-container{margin:0;}.formkit-form[data-uid="240ee4992a"] .formkit-submit{position:static;}.formkit-form[data-uid="240ee4992a"][min-width~="700"] [data-style="clean"],.formkit-form[data-uid="240ee4992a"][min-width~="800"] [data-style="clean"]{padding:10px;padding-top:56px;}.formkit-form[data-uid="240ee4992a"][min-width~="700"] .formkit-fields[data-stacked="false"],.formkit-form[data-uid="240ee4992a"][min-width~="800"] .formkit-fields[data-stacked="false"]{margin-left:-5px;margin-right:-5px;}.formkit-form[data-uid="240ee4992a"][min-width~="700"] .formkit-fields[data-stacked="false"] .formkit-field,.formkit-form[data-uid="240ee4992a"][min-width~="800"] .formkit-fields[data-stacked="false"] .formkit-field,.formkit-form[data-uid="240ee4992a"][min-width~="700"] .formkit-fields[data-stacked="false"] .formkit-submit,.formkit-form[data-uid="240ee4992a"][min-width~="800"] .formkit-fields[data-stacked="false"] .formkit-submit{margin:0 5px 15px 5px;}.formkit-form[data-uid="240ee4992a"][min-width~="700"] .formkit-fields[data-stacked="false"] .formkit-field,.formkit-form[data-uid="240ee4992a"][min-width~="800"] .formkit-fields[data-stacked="false"] .formkit-field{-webkit-flex:100 1 auto;-ms-flex:100 1 auto;flex:100 1 auto;}.formkit-form[data-uid="240ee4992a"][min-width~="700"] .formkit-fields[data-stacked="false"] .formkit-submit,.formkit-form[data-uid="240ee4992a"][min-width~="800"] .formkit-fields[data-stacked="false"] .formkit-submit{-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;}</style></form>
+      <!-- /Kit 表單嵌入區 -->
+
+      <p class="small" style="margin-top:18px; text-align:center;">
+        不會把你的 email 用在這場挑戰營以外的事。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Footer ============ -->
+<footer>
+  <div class="wrap">
+    © 2026 知騏然有限公司 · <a href="https://chichu.co/">chichu.co</a><br />
+  </div>
+</footer>
+
+<script>
+  /* 進場動畫：元素捲進視窗就加 .in-view， CSS 負責淡入上滑。
+     prefers-reduced-motion 時整段跳過，直接顯示。 */
+  (function () {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var items = document.querySelectorAll('[data-animate], .eyebrow');
+    if (reduce || !('IntersectionObserver' in window)) {
+      items.forEach(function (el) { el.classList.add('in-view'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
+    items.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+
+</body>
+</html>
