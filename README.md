@@ -4,7 +4,7 @@
 
 - 直播：2026 / 8/17、8/24、8/31、9/7（週一 20:00–21:00）
 - 開賣：2026 / 7/6
-- 早鳥名單登記蒐集：2026 / 6 月下旬啟動
+- 早鳥名單登記蒐集：2026 / 5 月中啟動（5/18–19 對外發布）
 - 線上網址：<https://wishlist.chichu.co/>（自訂網域，GitHub Pages 託管；`vizance.github.io/chatgpt-japanese-visual-bootcamp/` 會自動轉到這裡）
 
 ## 目錄
@@ -34,4 +34,4 @@ Kit 表單已嵌入（form `9432006` / uid `240ee4992a`），深色樣式由 `in
 - [x] 接自訂網域 wishlist.chichu.co（2026-05-12）→ 待 GitHub 簽好憑證後到 Settings → Pages 勾「Enforce HTTPS」
 - [ ] 決定售價（NT.6,800–7,800 區間，5/16 前）→ 開賣後若要在頁面標價再補
 - [ ] 把 Kit 後台的按鈕文字也改成「先幫我卡位 →」（目前頁面上是新的，Kit 後台還是舊的）
-- [ ] 6/20 對外發布早鳥登記頁連結（FB / Substack）
+- [ ] 5/18–19 對外發布早鳥登記頁連結（FB / Substack）
